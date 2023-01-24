@@ -24,10 +24,11 @@ nav {
     justify-content: space-around;
 }
 .logo{
-    padding-top: 10px;
+    padding-top: 25px;
     height: 100px ;
     display: flex;
     justify-content: center;
+    
 }
 ul{
     display: flex;
