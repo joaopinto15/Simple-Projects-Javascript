@@ -1,6 +1,24 @@
-/*
-    Default Font
-*/
+/***********************
+ *   Scrollbar Style   *
+ ***********************/
+html{
+    scroll-behavior: smooth;
+}
+html::-webkit-scrollbar {
+    width: 20px;
+}
+
+html::-webkit-scrollbar-track {
+    background-color: black;
+}
+
+html::-webkit-scrollbar-thumb {
+    background: #4e4e4e;
+    border-radius: 25px;
+}
+/********************
+ *   Default font   *
+ ********************/
 body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
@@ -9,28 +27,36 @@ body {
 section {
     background-color: white;
 }
-/*
-    Front Content
-*/
+/*****************
+ * First Section *
+ *****************/
 .hero {
     background-color: #1c1d25;
     height: 100vh;
     color: white;
     font-size: 40px;
 }
-
+/***************
+ *   Footer    *
+ ***************/
 footer {
     background-color: black;
     color: white;
     text-align: center;
     padding: 80px;
 }
-
+/*******************
+ *   Navigation    *
+ *******************/
 nav {
     display: flex;
     justify-content: space-between;
+    padding: 50px 100px;
+    
 }
-
+/*******************
+ *  Unordered List *
+ *******************/
 ul {
     display: flex;
     list-style-type: none;
@@ -38,26 +64,38 @@ ul {
     justify-content: space-around;
     font-size: 30px;
 }
-
+/******************
+ *   list item    *
+ ******************/
 li {
     text-decoration: none;
 }
-
+/*****************
+ *    Headings   *
+ *****************/
 h1 {
-    font-size: 90px;
+    font-size: 90px; /* 90px*/
     margin: 0;
 }
 
 h2 {
     font-size: 50px;
 }
-
+/******************
+ *   Paragraph    *
+ ******************/
 p {
     margin: 0;
     font-size: 30px;
     font-weight: 300;
 }
-
+/************************
+ *   Hyperlink default  *
+ ************************/
+a {
+    text-decoration: none;
+    color: white;
+}
 .subtext {
     font-size: 15px;
     font-weight: 300;
@@ -168,11 +206,9 @@ hr {
     color: #48D1CC;
 }
 
-a {
-    text-decoration: none;
-    color: white;
-}
-
+/***********************
+ *   Mobile adaptation *
+ ***********************/
 .hamburger {
     display: none;
 }
@@ -181,7 +217,9 @@ a {
     outline: 0;
 }
 
-
+/************************************************
+ *   remove nav when screen less than 1000px    *
+ ************************************************/
 @media only screen and (max-width: 1000px) {
     .hamburger {
         display: block;
@@ -213,12 +251,43 @@ a {
         display: none;
     }
 }
-
-#logo{
+/******************
+ * Socials icons  *
+ ******************/
+.socials i{
     font-size: 70px;
 }
-
-.ISEP{
+/**************************
+ *  ISEP hyperlink style  *
+ **************************/
+.information a{
     color: #008B8B;
     font-weight: 600;
+}
+
+/*****************************
+ *  navBar text animation    *
+ *****************************/
+.hover-underline-animation {
+    display: inline-block;
+    position: relative;
+    color: white;
+}
+
+.hover-underline-animation:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #008B8B;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.hover-underline-animation:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
 }
